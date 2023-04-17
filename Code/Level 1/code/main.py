@@ -54,6 +54,8 @@ class Game:
 			self.status = 'overworld'
 			self.level_bg_music.stop()
 			self.overworld_bg_music.play(loops = -1)
+			pygame.quit()
+			sys.exit()
 
 	def run(self):
 		if self.status == 'overworld':

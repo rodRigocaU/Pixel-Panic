@@ -3,6 +3,7 @@ import time
 import random
 import sys
 import math
+import subprocess
 
 # Para importar funcion main de nivel 1 que ejecute todo el nivel
 #sys.path.append('./Code/Level_1')
@@ -31,10 +32,10 @@ text_rect = text.get_rect(center=(WIDTH // 2, 50))
 
 
 # Cargar los fondos y escalarlos al tamaño de la ventana
-background1 = pygame.image.load("./Assets/fondos/fondoMenu1.jpg").convert()
+background1 = pygame.image.load("../../../Assets/fondos/fondoMenu1.jpg").convert()
 background1 = pygame.transform.scale(background1, (WIDTH, HEIGHT))
 
-background2 = pygame.image.load("./Assets/fondos/fondoMenu2.jpg").convert()
+background2 = pygame.image.load("../../../Assets/fondos/fondoMenu2.jpg").convert()
 background2 = pygame.transform.scale(background2, (WIDTH, HEIGHT))
 
 #Reproducir musica para el menu
@@ -135,6 +136,8 @@ while True:
                 in_transition = False
                 
                 # Llama a que se ejecute nivel
+
+                subprocess.run(["python", "main.py"])
 
                 # result_nivel1 = nivel1.main()
                 # if result_nivel2 == "quit" or result_nivel2 == "lose":

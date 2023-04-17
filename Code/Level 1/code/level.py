@@ -1,4 +1,5 @@
-import pygame 
+import pygame
+import sys
 from support import import_csv_layout, import_cut_graphics
 from settings import tile_size, screen_height, screen_width
 from tiles import Tile, StaticTile, Crate, Coin, Palm
@@ -215,6 +216,8 @@ class Level:
 	def check_death(self):
 		if self.player.sprite.rect.top > screen_height:
 			self.create_overworld(self.current_level,1)
+			pygame.quit()
+			sys.exit()
 			
 	def check_win(self):
 		if pygame.sprite.spritecollide(self.player.sprite,self.goal,False):
