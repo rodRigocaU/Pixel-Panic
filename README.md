@@ -1,3 +1,4 @@
+#TO SEE MENU OPEN LEVEL 1 MAIN.PY, AND THE LEVELS IN THE CARPET ATTACHED
 # Pixel-Panic
 In Pixel Panic, the player controls a character who must navigate through a series of levels that resemble classic video game worlds such as Super Mario Bros are glitched and filled with random bugs that affect the gameplay.
 
