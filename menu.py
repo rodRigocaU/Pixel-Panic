@@ -46,12 +46,12 @@ font_button = pygame.font.Font(None, 60)
 font_button_hover = pygame.font.Font(None, 72)
 
 # Renderizar los textos de los botones
-button1_text = font_button.render("Jugar", True, GREEN2)
-button2_text = font_button.render("Salir", True, GREEN2)
+button1_text = font_button.render("Play", True, GREEN2)
+button2_text = font_button.render("Exit", True, GREEN2)
 
 # Renderizar los textos de los botones al pasar el mouse
-button1_text_hover = font_button_hover.render("Jugar", True, GREEN)
-button2_text_hover = font_button_hover.render("Salir", True, GREEN)
+button1_text_hover = font_button_hover.render("Play", True, GREEN)
+button2_text_hover = font_button_hover.render("Exit", True, GREEN)
 
 # Obtener los rectángulos de los textos
 button1_rect = button1_text.get_rect()
@@ -135,7 +135,7 @@ while True:
                 in_transition = False
                 
                 # Llama a que se ejecute nivel
-                
+
                 # result_nivel1 = nivel1.main()
                 # if result_nivel2 == "quit" or result_nivel2 == "lose":
                 #     running = False
