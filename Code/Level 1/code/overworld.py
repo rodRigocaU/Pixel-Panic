@@ -85,7 +85,7 @@ class Overworld:
 		icon_sprite = Icon(self.nodes.sprites()[self.current_level].rect.center)
 		self.icon.add(icon_sprite)
 
-	def input(self):
+	def input(self, go):
 		keys = pygame.key.get_pressed()
 
 		if not self.moving and self.allow_input:
@@ -97,7 +97,7 @@ class Overworld:
 				self.move_direction = self.get_movement_data('previous')
 				self.current_level -= 1
 				self.moving = True
-			elif keys[pygame.K_SPACE]:
+			elif go:
 				self.create_level(self.current_level)
 
 	def get_movement_data(self,target):
@@ -126,12 +126,12 @@ class Overworld:
 
 	def run(self):
 		self.input_timer()
-		self.input()
-		self.update_icon_pos()
-		self.icon.update()
-		self.nodes.update()
+		self.input(True)
+		#self.update_icon_pos()
+		#self.icon.update()
+		#self.nodes.update()
 
-		self.sky.draw(self.display_surface)
-		self.draw_paths()
-		self.nodes.draw(self.display_surface)
-		self.icon.draw(self.display_surface)
+		#self.sky.draw(self.display_surface)
+		#self.draw_paths()
+		#self.nodes.draw(self.display_surface)
+		#self.icon.draw(self.display_surface)
